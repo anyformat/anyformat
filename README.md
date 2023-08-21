@@ -4,31 +4,6 @@
 
 **FormatHub** is a main project about amounting as many different extensions as possible from the files collections. The same operations and contents are included for each different syntax and file extension, respecting their own rules. Test features that support file extensions or utilize them as a template with **FormatHub** repositories that are categorized by topics.
 
-## Automation source script
-
-- Clone all repositories at once
-
-```bash
-#!/usr/bin/sh
-
-#BRANCH_NAME="main"
-BRANCH_NAME="development"
-
-#git clone https://github.com/formathub/formathub --branch "$BRANCH_NAME"
-git clone https://github.com/formathub/audio --branch "$BRANCH_NAME"
-git clone https://github.com/formathub/binary --branch "$BRANCH_NAME"
-git clone https://github.com/formathub/code --branch "$BRANCH_NAME"
-git clone https://github.com/formathub/compression --branch "$BRANCH_NAME"
-git clone https://github.com/formathub/data --branch "$BRANCH_NAME"
-git clone https://github.com/formathub/document --branch "$BRANCH_NAME"
-git clone https://github.com/formathub/font --branch "$BRANCH_NAME"
-git clone https://github.com/formathub/form --branch "$BRANCH_NAME"
-git clone https://github.com/formathub/image --branch "$BRANCH_NAME"
-git clone https://github.com/formathub/setting --branch "$BRANCH_NAME"
-git clone https://github.com/formathub/spreadsheet --branch "$BRANCH_NAME"
-git clone https://github.com/formathub/video --branch "$BRANCH_NAME"
-```
-
 ## Rules
 
 - Submitting files
@@ -73,7 +48,9 @@ git clone https://github.com/formathub/video --branch "$BRANCH_NAME"
 		1. Contains a description about the required conversion tools.
 		1. Contains a picture or the file content example about what is going to be converted.
 
-- The `./converter.sh` file
+### Templates
+
+- The `./converter.sh` template file
 
 ```bash
 #!/usr/bin/sh
@@ -102,4 +79,29 @@ convertFromFormatOriginToFormat1Destiny "$PATH_FILE_ORIGIN" "$PATH_DIRECTORY_DES
 convertFromFormatOriginToFormat2Destiny "$PATH_FILE_ORIGIN" "$PATH_DIRECTORY_DESTINY"
 
 cp "$PATH_FILE_ORIGIN" "$PATH_DIRECTORY_DESTINY"
+```
+
+### Automation source script
+
+- Clone all repositories at once
+
+```bash
+#!/usr/bin/sh
+
+#BRANCH_NAME="main"
+BRANCH_NAME="development"
+
+#git clone https://github.com/formathub/formathub --branch "$BRANCH_NAME"
+git clone https://github.com/formathub/audio --branch "$BRANCH_NAME"
+git clone https://github.com/formathub/binary --branch "$BRANCH_NAME"
+git clone https://github.com/formathub/code --branch "$BRANCH_NAME"
+git clone https://github.com/formathub/compression --branch "$BRANCH_NAME"
+git clone https://github.com/formathub/data --branch "$BRANCH_NAME"
+git clone https://github.com/formathub/document --branch "$BRANCH_NAME"
+git clone https://github.com/formathub/font --branch "$BRANCH_NAME"
+git clone https://github.com/formathub/form --branch "$BRANCH_NAME"
+git clone https://github.com/formathub/image --branch "$BRANCH_NAME"
+git clone https://github.com/formathub/setting --branch "$BRANCH_NAME"
+git clone https://github.com/formathub/spreadsheet --branch "$BRANCH_NAME"
+git clone https://github.com/formathub/video --branch "$BRANCH_NAME"
 ```
